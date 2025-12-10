@@ -24,8 +24,4 @@ def generar_codigo_aleatorio():
     emojis_codigo_aleatorio = []
     for ficha in codigo_aleatorio:
         emojis_codigo_aleatorio.append(EMOJIS_COLORES[ficha])
-    return print(' '.join(emojis_codigo_aleatorio))
-
-
-
-generar_codigo_aleatorio()
+    return ''.join(emojis_codigo_aleatorio)
