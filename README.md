@@ -7,6 +7,7 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
     El usuario introduce una combinación de 4 colores de entre 6 (amarillo, verde, azul, negro, marrón, morado) colores disponibles con posibilidad de repetir, para que el algoritmo tenga un código válido que intentar adivinar.
 
 
+
 2. Verificación del código introducido
 
     Antes de empezar a resolver, el programa revisa que el código secreto tenga 4 colores y que todos pertenezcan al conjunto permitido. Si algo no es correcto, se informa al jugador para que este lo corriga.
@@ -24,13 +25,12 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
 
 5. Corrección del intento
 
-    Después de generar una combonación, el programa compara ese intento con el código secreto y se usará para dar pistas as clavijas usando estas instrucciones:
+  Después de generar una combonación, el programa compara ese intento con el código secreto y se usará para dar pistas as clavijas usando estas instrucciones:
 
-    - Key peg roja: el color es correcto y está en la posición adecuada.
+  - Key peg roja: el color es correcto y está en la posición adecuada.
+  - Key peg blanco: el color aparece en el código, pero en una posición diferente.
+  - Sin key peg: ese color no forma parte del código secreto.
 
-    - Key peg blanco: el color aparece en el código, pero en una posición diferente.
-
-    - Sin key peg: ese color no forma parte del código secreto.
 
 
 6. Ajuste de posibilidades
@@ -43,7 +43,6 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
     El algoritmo continúa este proceso hasta llegar el último intento (el 14) donde puede ocurrir dos soluciones:
 
     - El algoritmo acierta completamente el código.
-
     - El algoritmo hace los 14 intentos permitidos sin encontrar la combinación correcta.
 
     En ambas soluciones, el programa debe mostrar el resultado final del proceso
@@ -51,4 +50,4 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
 
 8. Puntuación del juego
 
-Al finalizar la partida, el juego debe calcular la puntuación según el número de intentos que el algoritmo ha necesitado para descifrar el código. Según las reglas del Mastermind, el creador del código gana tantos puntos como filas haya tenido que usar el oponente antes de acertar.
+  Al finalizar la partida, el juego debe calcular la puntuación según el número de intentos que el algoritmo ha necesitado para descifrar el código. Según las reglas del Mastermind, el creador     del código gana tantos puntos como filas haya tenido que usar el oponente antes de acertar.
