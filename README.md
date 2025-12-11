@@ -46,7 +46,7 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
 
     - El algoritmo hace los 14 intentos permitidos sin encontrar la combinación correcta.
 
-    En ambos soluciones, el programa debe mostrar el resultado final del proceso
+    En ambas soluciones, el programa debe mostrar el resultado final del proceso
 
 
 8. Puntuación del juego
