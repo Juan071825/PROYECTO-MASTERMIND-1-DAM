@@ -1,19 +1,8 @@
-COLORES = ['rojo', 'verde', 'azul', 'amarillo', 'morado', 'negro', 'blanco', 'marrón']
-
-EMOJIS_COLORES = {
-'rojo': "\U0001F534",
-'verde': "\U0001F7E2",
-'azul': "\U0001F535",
-'amarillo': "\U0001F7E1",
-'morado': "\U0001F7E3",
-'negro': "\u26AB",
-'blanco': "\u26AA",
-'marrón': "\U0001F7E4"
-}
+from parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
 
 def pedir_codigo_secreto():
     print('Por favor, introduce un código de 4 colores de entre los siguientes 8, pueden estar repetidos:')
-    print(", ".join(COLORES) + '.')
+    print(", ".join(COLORES_ELEGIBLES) + '.')
     print('Para que funcione correctamente, introduce el nombre del color tak cual aparece arriba. Y cuidado con los espacios!')
     UNO = 1
     codigo_secreto = []
@@ -24,7 +13,7 @@ def pedir_codigo_secreto():
         entrada_color = input('Introduce un color: ')
         
         
-        if entrada_color in COLORES:
+        if entrada_color in COLORES_ELEGIBLES:
             codigo_secreto.append(entrada_color)
     
         else:
@@ -37,6 +26,6 @@ def pedir_codigo_secreto():
     return print(' '.join(emojis_codigo_secreto))
             
 
-pedir_codigo_secreto()
+
 
 
