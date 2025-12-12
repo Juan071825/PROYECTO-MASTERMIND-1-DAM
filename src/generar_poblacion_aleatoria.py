@@ -1,4 +1,4 @@
-from generar_codigo_aleatorio import generar_codigo_aleatorio
+from src.generar_codigo_aleatorio import generar_codigo_aleatorio
 
 def generar_poblacion_aleatoria(numero_soluciones):
     censo ={}
