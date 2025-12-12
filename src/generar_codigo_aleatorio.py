@@ -1,6 +1,6 @@
 import random
 
-from parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
+from src.parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
 
 def generar_codigo_aleatorio():
     
