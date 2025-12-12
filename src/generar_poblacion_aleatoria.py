@@ -2,7 +2,7 @@ from generar_codigo_aleatorio import generar_codigo_aleatorio
 
 def generar_poblacion_aleatoria(numero_soluciones):
     censo ={}
-    cont = 0
+    cont = 1
     UNO = 1
 
     while cont < numero_soluciones:
@@ -11,7 +11,3 @@ def generar_poblacion_aleatoria(numero_soluciones):
         cont += UNO
 
     return censo
-
-
-
-
