@@ -1,6 +1,9 @@
+import sys
+import src.introducir_codigo as modulos
 def main():
-    print("Hello from proyecto-mastermind-1-dam!")
+    
+    codigo = modulos.pedir_codigo_secreto()
 
+    return print(codigo)
 
-if __name__ == "__main__":
-    main()
+main()
