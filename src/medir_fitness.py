@@ -1,5 +1,5 @@
-from generar_poblacion_aleatoria import generar_poblacion_aleatoria
-from introducir_codigo import pedir_codigo_secreto
+from src.generar_poblacion_aleatoria import generar_poblacion_aleatoria
+from src.introducir_codigo import pedir_codigo_secreto
 
 
 def medir_fitness():
@@ -17,6 +17,3 @@ def medir_fitness():
                 fitness += 0
         registro_fitness.append(fitness)
     return registro_fitness
-
-
-print(medir_fitness())
