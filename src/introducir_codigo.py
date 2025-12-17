@@ -1,4 +1,4 @@
-from parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
+from src.parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
 
 def pedir_codigo_secreto():
     print('Por favor, introduce un código de 4 colores de entre los siguientes 8, pueden estar repetidos:')
@@ -23,7 +23,7 @@ def pedir_codigo_secreto():
     for ficha in codigo_secreto:
         emojis_codigo_secreto.append(EMOJIS_COLORES[ficha])
     
-    return print(' '.join(emojis_codigo_secreto))
+    return emojis_codigo_secreto
             
 
 
