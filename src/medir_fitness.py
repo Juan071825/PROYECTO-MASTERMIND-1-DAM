@@ -18,7 +18,7 @@ def medir_fitness():
             else:
                 fitness += 0
         valores_fitness.append(fitness)
-        return valores_fitness
+    return valores_fitness
 
 
 
@@ -29,12 +29,8 @@ def registrar_fitness():
     
     valores_fitness = medir_fitness()
     dict_fitness = {}
-    
-    for key in censo.keys():
-        for valores in list(zip(censo_individuos, valores_fitness)):
-            dict_fitness[key] = valores
-
-    return print(dict_fitness)
+    values_dict = list(zip(censo_individuos, valores_fitness))
+    return print(dict(zip(censo.keys(), values_dict)))
 
 
 registrar_fitness()
