@@ -28,3 +28,8 @@ def pedir_codigo_secreto():
         emojis_codigo_secreto.append(EMOJIS_COLORES[ficha])
     
     return ' '.join(emojis_codigo_secreto)
+            
+
+
+
+
