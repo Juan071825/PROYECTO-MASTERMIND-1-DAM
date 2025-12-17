@@ -1,9 +1,10 @@
-from parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
+from src.parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
 
 def pedir_codigo_secreto():
     print('Por favor, introduce un código de 4 colores de entre los siguientes 8, pueden estar repetidos:')
     print(", ".join(COLORES_ELEGIBLES) + '.')
     print('Para que funcione correctamente, introduce el nombre del color tak cual aparece arriba. Y cuidado con los espacios!')
+    print("Si deseas salir del juego, teclea 'e' en cualquier momento.")
     UNO = 1
     codigo_secreto = []
 
@@ -19,11 +20,14 @@ def pedir_codigo_secreto():
         else:
             print("Algún color no es válido, inténtalo de nuevo.")
 
+        if entrada_color == 'e':
+            return print("Has salido del juego.")
+
     emojis_codigo_secreto = []
     for ficha in codigo_secreto:
         emojis_codigo_secreto.append(EMOJIS_COLORES[ficha])
     
-    return print(' '.join(emojis_codigo_secreto))
+    return ' '.join(emojis_codigo_secreto)
             
 
 
