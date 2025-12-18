@@ -7,6 +7,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.generar_codigo_aleatorio import generar_codigo_aleatorio, EMOJIS_COLORES
 from src.generar_poblacion_aleatoria import generar_poblacion_aleatoria
 from src.introducir_codigo import pedir_codigo_secreto
+from src.medir_fitness import medir_fitness
 
 
 # Test 1 generar_codigo_aleatorio
@@ -78,3 +79,18 @@ def test_pedir_codigo_secreto_longitud():
 
     assert len(colores) == 4
     assert len(emojis) == 4
+
+
+# Test 1 (con el código incompleto) medir_fitness
+
+@pytest.mark.medir_fitness
+def test_medir_fitness():
+    codigo_secreto = ["rojo", "azul", "morado", "negro"]
+    intento = ["rojo", "verde", "morado", "amarillo"]
+
+    fitness = medir_fitness(codigo_secreto, intento)
+
+    assert fitness == 2
+
+
+
