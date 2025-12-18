@@ -27,7 +27,7 @@ def pedir_codigo_secreto():
     for ficha in codigo_secreto:
         emojis_codigo_secreto.append(EMOJIS_COLORES[ficha])
     
-    return ' '.join(emojis_codigo_secreto)
+    return list(emojis_codigo_secreto)
             
 
 
