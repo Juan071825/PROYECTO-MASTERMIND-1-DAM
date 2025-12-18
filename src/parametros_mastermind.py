@@ -10,3 +10,5 @@ EMOJIS_COLORES = {
 'negro': "\u26AB",
 'blanco': "\u26AA",
 'marrón': "\U0001F7E4"}
+
+PORCETAJE_DEFUNCION = 0.25

@@ -46,7 +46,6 @@ def registrar_fitness():
     valores_fitness = medir_fitness()
     
     values_dict = list(zip(censo_individuos, valores_fitness))
-    return print(dict(zip(censo.keys(), values_dict)))
+    return dict(zip(censo.keys(), values_dict))
 
 
-registrar_fitness()
