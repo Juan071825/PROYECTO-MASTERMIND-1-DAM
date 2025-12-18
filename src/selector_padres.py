@@ -22,6 +22,13 @@ def selector_padres():
         k=numero_padres
     )
 
+    padres_seleccionados = set(padres_seleccionados)
+
+    while len(padres_seleccionados) < numero_padres:
+        padres_seleccionados.add(random.choices(population=keys, weights=pesos, k=1)[0] )
+        #[0] para impedir que metas una lista dentro de un set.
+        
+
     return print(len({key: poblacion[key] for key in padres_seleccionados})), print({key: poblacion[key] for key in padres_seleccionados})
 
 selector_padres()
