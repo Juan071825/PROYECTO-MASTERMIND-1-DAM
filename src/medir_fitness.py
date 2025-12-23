@@ -1,12 +1,13 @@
 from src.generar_poblacion_aleatoria import generar_poblacion_aleatoria
 from src.introducir_codigo import pedir_codigo_secreto
+from src.crear_offspring import crear_offspring
  
-poblacion = generar_poblacion_aleatoria()
+
 cromosoma_secreto = pedir_codigo_secreto()
-individuos = list(poblacion.values())
 
-def medir_fitness():
 
+def medir_fitness(poblacion):
+    individuos = list(poblacion.values())
     valores_fitness = []
     
     
@@ -34,18 +35,19 @@ def medir_fitness():
                 fitness += 0
         
         valores_fitness.append(fitness)
-    return valores_fitness
-
-
-
-
-
-
-def registrar_fitness():
-    
-    valores_fitness = medir_fitness()
     
     valores_diccionario_fitness = list(zip(individuos, valores_fitness))
     return dict(zip(poblacion.keys(), valores_diccionario_fitness))
+    
+    
+
+
+if __name__ == "__main__":
+
+    poblacion = generar_poblacion_aleatoria()
+    medir_fitness(poblacion)
+
+    poblacion = crear_offspring()
+    medir_fitness(poblacion)
 
 
