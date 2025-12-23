@@ -4,15 +4,17 @@ from src.parametros_mastermind import PORCETAJE_DEFUNCION
 
 
 def selector_padres():
+
+    UNO = 1
     poblacion = registrar_fitness()
-    numero_padres = int(len(poblacion)*(1-PORCETAJE_DEFUNCION))
+    numero_padres = int(len(poblacion) * (UNO -PORCETAJE_DEFUNCION))
 
     keys = list(poblacion.keys())
     lista_fitness = [poblacion[key][1] for key in keys]
 
     pesos = []
     for fitness in lista_fitness:
-        pesos.append(fitness + 1)
+        pesos.append(fitness + UNO)
 
 
 

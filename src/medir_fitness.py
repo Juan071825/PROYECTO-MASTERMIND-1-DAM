@@ -1,34 +1,34 @@
 from src.generar_poblacion_aleatoria import generar_poblacion_aleatoria
 from src.introducir_codigo import pedir_codigo_secreto
  
-censo = generar_poblacion_aleatoria()
-codigo_secreto = pedir_codigo_secreto()
-censo_individuos = list(censo.values())
+poblacion = generar_poblacion_aleatoria()
+cromosoma_secreto = pedir_codigo_secreto()
+individuos = list(poblacion.values())
 
 def medir_fitness():
 
     valores_fitness = []
     
     
-    for individuo in censo_individuos:
-        codigo_secreto_copy = codigo_secreto.copy()
-        individuo_copy = individuo.copy()
+    for individuo in individuos:
+        cromosoma_secreto_copia = cromosoma_secreto.copy()
+        individuo_copia = individuo.copy()
         fitness = 0
         
-        for index in range(len(individuo)):
+        for alelo in range(len(individuo)):
            #Coincidencia exacta (color y posición).
-            if individuo_copy[index] == codigo_secreto_copy[index]:
+            if individuo_copia[alelo] == cromosoma_secreto_copia[alelo]:
                 fitness += 2
-                codigo_secreto_copy[index] = None
-                individuo_copy[index] = None
+                cromosoma_secreto_copia[alelo] = None
+                individuo_copia[alelo] = None
 
 
-        for index in range(len(individuo)):
+        for alelo in range(len(individuo)):
             #Coincidencia parcial (color pero no posición).
-            if individuo_copy[index] is not None and individuo_copy[index] in codigo_secreto_copy:
+            if individuo_copia[alelo] is not None and individuo_copia[alelo] in cromosoma_secreto_copia:
                 fitness += 1
-                codigo_secreto_copy[codigo_secreto_copy.index(individuo_copy[index])] = None
-                individuo_copy[index] = None
+                cromosoma_secreto_copia[cromosoma_secreto_copia.index(individuo_copia[alelo])] = None
+                individuo_copia[alelo] = None
 
             else:
                 fitness += 0
@@ -45,7 +45,7 @@ def registrar_fitness():
     
     valores_fitness = medir_fitness()
     
-    values_dict = list(zip(censo_individuos, valores_fitness))
-    return dict(zip(censo.keys(), values_dict))
+    valores_diccionario_fitness = list(zip(individuos, valores_fitness))
+    return dict(zip(poblacion.keys(), valores_diccionario_fitness))
 
 

@@ -1,14 +1,14 @@
 from src.generar_codigo_aleatorio import generar_codigo_aleatorio
 
-def generar_poblacion_aleatoria(numero_soluciones=100):
-    censo ={}
-    cont = 0
+def generar_poblacion_aleatoria(numero_individuos=100):
+    poblacion ={}
+    contador_individuos = 0
     UNO = 1
 
-    while cont < numero_soluciones:
+    while contador_individuos < numero_individuos:
         individuo = generar_codigo_aleatorio()
-        censo['individuo' + str(cont +1)] = individuo
-        cont += UNO
+        poblacion['individuo' + str(contador_individuos + UNO)] = individuo
+        contador_individuos += UNO
 
-    return censo
+    return poblacion
 

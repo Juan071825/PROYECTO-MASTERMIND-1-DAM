@@ -1,17 +1,17 @@
 import random
 
-from src.parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
+from src.parametros_mastermind import ALELOS_ELEGIBLES, EMOJIS_ALELOS
 
 def generar_codigo_aleatorio():
     
-    codigo_aleatorio = []
+    cromosoma_aleatorio = []
 
-    while len(codigo_aleatorio) < 4:
-        codigo_aleatorio.append(random.choice(COLORES_ELEGIBLES))
+    while len(cromosoma_aleatorio) < 4:
+        cromosoma_aleatorio.append(random.choice(ALELOS_ELEGIBLES))
 
     
-    emojis_codigo_aleatorio = []
-    for ficha in codigo_aleatorio:
-        emojis_codigo_aleatorio.append(EMOJIS_COLORES[ficha])
-    return list(emojis_codigo_aleatorio)
+    emojis_cromosoma_aleatorio = []
+    for alelo in cromosoma_aleatorio:
+        emojis_cromosoma_aleatorio.append(EMOJIS_ALELOS[alelo])
+    return list(emojis_cromosoma_aleatorio)
 

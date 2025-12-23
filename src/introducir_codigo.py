@@ -1,33 +1,33 @@
-from src.parametros_mastermind import COLORES_ELEGIBLES, EMOJIS_COLORES
+from src.parametros_mastermind import ALELOS_ELEGIBLES, EMOJIS_ALELOS
 
 def pedir_codigo_secreto():
     print('Por favor, introduce un código de 4 colores de entre los siguientes 8, pueden estar repetidos:')
-    print(", ".join(COLORES_ELEGIBLES) + '.')
-    print('Para que funcione correctamente, introduce el nombre del color tak cual aparece arriba. Y cuidado con los espacios!')
+    print(", ".join(ALELOS_ELEGIBLES) + '.')
+    print('Para que funcione correctamente, introduce el nombre del color tal cual aparece arriba. Y cuidado con los espacios!')
     print("Si deseas salir del juego, teclea 'e' en cualquier momento.")
     UNO = 1
-    codigo_secreto = []
+    cromosoma_secreto = []
 
-    while len(codigo_secreto) != 4:
+    while len(cromosoma_secreto) != 4:
         print('Debes introducir los 4 colores.')
-        print('Introduce el color ' + str(len(codigo_secreto)+ UNO) +'.')
-        entrada_color = input('Introduce un color: ')
+        print('Introduce el color ' + str(len(cromosoma_secreto)+ UNO) +'.')
+        entrada_alelo = input('Introduce un color: ')
         
         
-        if entrada_color in COLORES_ELEGIBLES:
-            codigo_secreto.append(entrada_color)
+        if entrada_alelo in ALELOS_ELEGIBLES:
+            cromosoma_secreto.append(entrada_alelo)
     
         else:
             print("Algún color no es válido, inténtalo de nuevo.")
 
-        if entrada_color == 'e':
+        if entrada_alelo == 'e':
             return print("Has salido del juego.")
 
-    emojis_codigo_secreto = []
-    for ficha in codigo_secreto:
-        emojis_codigo_secreto.append(EMOJIS_COLORES[ficha])
+    emojis_cromosoma_secreto = []
+    for alelo in cromosoma_secreto:
+        emojis_cromosoma_secreto.append(EMOJIS_ALELOS[alelo])
     
-    return list(emojis_codigo_secreto)
+    return list(emojis_cromosoma_secreto)
             
 
 

@@ -1,7 +1,7 @@
-COLORES_ELEGIBLES = ['verde', 'azul', 'amarillo', 'morado', 'negro', 'marrón']
+ALELOS_ELEGIBLES = ['verde', 'azul', 'amarillo', 'morado', 'negro', 'marrón']
 COLORES_INDICADORES = ['rojo', 'blanco']
 
-EMOJIS_COLORES = {
+EMOJIS_ALELOS = {
 'rojo': "\U0001F534",
 'verde': "\U0001F7E2",
 'azul': "\U0001F535",
