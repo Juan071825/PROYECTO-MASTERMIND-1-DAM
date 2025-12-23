@@ -4,7 +4,7 @@ import os
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.generar_codigo_aleatorio import generar_codigo_aleatorio, EMOJIS_COLORES
+from src.generar_codigo_aleatorio import generar_codigo_aleatorio, EMOJIS_ALELOS
 from src.generar_poblacion_aleatoria import generar_poblacion_aleatoria
 from src.introducir_codigo import pedir_codigo_secreto
 from src.medir_fitness import medir_fitness
@@ -19,7 +19,7 @@ def test_generar_codigo_aleatorio():
     assert len(resultado) == 4
 
     for emoji in resultado:
-        assert emoji in EMOJIS_COLORES.values()
+        assert emoji in EMOJIS_ALELOS.values()
 
 
 # Test 2 generar_codigo_aleatorio
@@ -43,7 +43,7 @@ def test_generar_poblacion_aleatoria():
         assert clave.startswith("individuo")
         assert len(codigo) == 4
         for emoji in codigo:
-            assert emoji in EMOJIS_COLORES.values()
+            assert emoji in EMOJIS_ALELOS.values()
 
 
 # Test 2 generar_poblacion_aleatoria
@@ -66,7 +66,7 @@ def test_pedir_codigo_secreto():
     assert len(emojis) == 4
 
     for posicion in range(4):
-        assert emojis[posicion] == EMOJIS_COLORES[colores[posicion]]
+        assert emojis[posicion] == EMOJIS_ALELOS[colores[posicion]]
 
 
 # Test 2 pedir_codigo_secreto
