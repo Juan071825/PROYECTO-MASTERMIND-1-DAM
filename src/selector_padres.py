@@ -31,7 +31,5 @@ def selector_padres():
         #[0] para impedir que metas una lista dentro de un set.
         
 
-    return print(len({key: poblacion[key] for key in padres_seleccionados})), print({key: poblacion[key] for key in padres_seleccionados})
-
-selector_padres()
+    return {key: poblacion[key] for key in padres_seleccionados}
 
