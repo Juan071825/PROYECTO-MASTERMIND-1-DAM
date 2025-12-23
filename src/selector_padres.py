@@ -1,12 +1,12 @@
 import random
-from src.medir_fitness import registrar_fitness
+from src.medir_fitness import medir_fitness
 from src.parametros_mastermind import PORCETAJE_DEFUNCION
 
 
 def selector_padres():
 
     UNO = 1
-    poblacion = registrar_fitness()
+    poblacion = medir_fitness()
     numero_padres = int(len(poblacion) * (UNO -PORCETAJE_DEFUNCION))
 
     keys = list(poblacion.keys())

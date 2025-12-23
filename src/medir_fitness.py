@@ -38,16 +38,6 @@ def medir_fitness(poblacion):
     
     valores_diccionario_fitness = list(zip(individuos, valores_fitness))
     return dict(zip(poblacion.keys(), valores_diccionario_fitness))
-    
-    
 
-
-if __name__ == "__main__":
-
-    poblacion = generar_poblacion_aleatoria()
-    medir_fitness(poblacion)
-
-    poblacion = crear_offspring()
-    medir_fitness(poblacion)
 
 
