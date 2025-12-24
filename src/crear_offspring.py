@@ -2,11 +2,10 @@ import random
 from src.parametros_mastermind import ALELOS_ELEGIBLES, EMOJIS_ALELOS
 from src.selector_padres import selector_padres
 
-def crear_offspring():
+def crear_offspring(poblacion):
 
     UNO = 1
 
-    poblacion = selector_padres()
     
     lista_hijos = []
     

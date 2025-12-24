@@ -3,10 +3,10 @@ from src.medir_fitness import medir_fitness
 from src.parametros_mastermind import PORCETAJE_DEFUNCION
 
 
-def selector_padres():
+def selector_padres(poblacion):
 
     UNO = 1
-    poblacion = medir_fitness()
+    
     numero_padres = int(len(poblacion) * (UNO -PORCETAJE_DEFUNCION))
 
     keys = list(poblacion.keys())
