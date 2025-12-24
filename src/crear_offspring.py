@@ -2,7 +2,7 @@ import random
 from src.parametros_mastermind import ALELOS_ELEGIBLES, EMOJIS_ALELOS
 from src.selector_padres import selector_padres
 
-def crear_offspring(poblacion):
+def crear_offspring(progenitores):
 
     UNO = 1
 
@@ -12,12 +12,12 @@ def crear_offspring(poblacion):
     while len(lista_hijos) < 25:
 
         pareja_seleccionada = random.choices(
-            population= list(poblacion.keys()),
+            population= list(progenitores.keys()),
             k= 2
         )
 
-        padre = poblacion[pareja_seleccionada[0]][0]
-        madre = poblacion[pareja_seleccionada[1]][0]
+        padre = progenitores[pareja_seleccionada[0]][0]
+        madre = progenitores[pareja_seleccionada[1]][0]
 
         punto_cruce = random.randint(1, 3)
 

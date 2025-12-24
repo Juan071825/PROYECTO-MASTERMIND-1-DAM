@@ -1,6 +1,5 @@
-from src.generar_poblacion_aleatoria import generar_poblacion_aleatoria
 from src.introducir_codigo import pedir_codigo_secreto
-from src.crear_offspring import crear_offspring
+
  
 
 cromosoma_secreto = pedir_codigo_secreto()
