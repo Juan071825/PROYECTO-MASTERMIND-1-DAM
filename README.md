@@ -1,3 +1,47 @@
+# ÍNDICE
+<ul>
+<li>Introducción</li>
+<li>Manual</li>
+<li>Metodología</li>
+<li>Descripción técnica</li>
+<li>Diseño</li>
+<li>Implementación</li>
+<li>Pruebas</li>
+<li>Estudio de tiempo invertido</li>
+<li>Uso de la IA</li>
+<li>Conclusión</li>
+</ul><hr/><hr/>
+
+## Introducción
+
+Juan Mateo Álvarez Álvarez  - @Juan071825 <br/>
+Adrián González González    - @Adriceka
+
+Este proyecto consiste en recrear en el lenguaje de programación python el juego de mesa Mastermind. Además de python también hemos utilizado otras herramientas y lenguajes como git, markdown, ruff.
+
+## Manual
+
+## Metodología
+
+Para llevar a cabo este proyecto decidimos empezar por la lógica del proyecto.
+Para saber que módulos de python con la lógica del programa teníamos que crear, seguimos la guía del algoritmo genético del libro Artificial Intelligence Algorithms de Rishal Hurbans.
+
+La metodología empleada tiene su enfoque inspirado en TDD y consta de tres pasos:
+
+1.- Entre los dos integrantes del grupo hacemos una lista de requisitos que debe cumplir un módulo, de funcionalidades que debe de tener. Esto nos sirve para el siguiente paso. <br/>
+
+2.- Uno se dedica a desarrollar el módulo utilizando, en un primer momento, las salidas por consola de guía, mientras que el otro creará los casos test. <br/>
+
+3.- La última fase es la de comprobación, en la que se verá si un módulo pasa los casos test creados para él.<br/>
+
+Para la documentación simplemente seguimos los ejemplos dados en clase como guía de conteniudos que debía tener nuestro README.
+
+## Descripción técnica
+
+### Not list
+
+### Historias de usuario
+
 HISTORIAS USUARIO PROYECTTO MASTERMIND
 ==================================
 ## REGLAS DEL JUEGO
@@ -51,3 +95,58 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
 8. Puntuación del juego
 
   Al finalizar la partida, el juego debe calcular la puntuación según el número de intentos que el algoritmo ha necesitado para descifrar el código. Según las reglas del Mastermind, el creador     del código gana tantos puntos como filas haya tenido que usar el oponente antes de acertar.
+
+
+
+
+
+
+
+### Arquitectura de la aplicación
+
+
+## Diseño
+
+### Diagrama de componentes
+
+## Implementación
+
+### Tecnologías y herramientas utilizadas
+
+<ul>
+<li>pytest, es un framework de python para testear código</li>
+<li>pytest-sugar, es implementa dentro de pytest para hacerlo más visual y amigable</li>
+<li>Coverage, es una herramienta que vine cuanto porcentaje de tu código se ejecuta al realizarse los casos test</li>
+<li>Markdown</li>
+<li>git</li>
+</ul>
+
+### Backend
+
+### Fronted
+
+<hr/><hr/>
+
+## Pruebas
+
+### Coverage
+
+### Test de unidad
+
+### Test de integridad
+
+## Análisis del tiempo invertido
+
+### Reflexión sobre el tiempo invertido
+
+## Uso de la IA
+
+## Conclusión
+
+### Cosas a mejorar
+
+### Dificultades
+
+
+
+
