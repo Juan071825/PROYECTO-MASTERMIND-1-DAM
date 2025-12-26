@@ -2,10 +2,12 @@ from src.introducir_codigo import pedir_codigo_secreto
 
  
 
-cromosoma_secreto = pedir_codigo_secreto()
 
 
-def medir_fitness(poblacion):
+
+def medir_fitness(poblacion, cromosoma_secreto):
+
+
     individuos = list(poblacion.values())
     valores_fitness = []
     

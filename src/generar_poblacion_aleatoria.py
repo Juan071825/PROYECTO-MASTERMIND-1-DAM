@@ -1,6 +1,6 @@
 from src.generar_codigo_aleatorio import generar_codigo_aleatorio
 
-def generar_poblacion_aleatoria(numero_individuos=100):
+def generar_poblacion_aleatoria(numero_individuos):
     poblacion ={}
     contador_individuos = 0
     UNO = 1
