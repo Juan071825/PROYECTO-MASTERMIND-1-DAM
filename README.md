@@ -121,6 +121,7 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
 <li><a heref='https://coverage.readthedocs.io/en/7.13.0/'>Coverage</a>, es una herramienta que vine cuanto porcentaje de tu código se ejecuta al realizarse los casos test.</li>
 <li><a href='https://es.wikipedia.org/wiki/Markdown'>Markdown</a>, es un lenguaje de marcado ligero.</li>
 <li><a href='https://es.wikipedia.org/wiki/Git'>git</a>, es un software ideado para el control de versiones.</li>
+<li><a href='https://docs.astral.sh/ruff/'>ruff</a>, es un <a href='https://keepcoding.io/blog/que-es-un-linter-en-programacion/'>linter</a> y formateador de código python</li>
 </ul>
 
 ### Backend
