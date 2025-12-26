@@ -1,42 +1,44 @@
 # ÍNDICE
 <ul>
-<li>Introducción</li>
-<li>Manual</li>
-<li>Metodología</li>
-<li>Descripción técnica</li>
-<li>Diseño</li>
-<li>Implementación</li>
-<li>Pruebas</li>
-<li>Estudio de tiempo invertido</li>
-<li>Uso de la IA</li>
-<li>Conclusión</li>
+<li><a href='#introduccion'>Introducción</a></li>
+<li><a href='#manual'>Manual</a></li>
+<li><a href='#metodologia'>Metodología</a></li>
+<li><a href='#descripcion'>Descripción técnica</a></li>
+<li><a href='#diseño'>Diseño</a></li>
+<li><a href='#implementacion'>Implementación</a></li>
+<li><a href='pruebas'>Pruebas</a></li>
+<li><a href='#tiempo'>Estudio de tiempo invertido</a></li>
+<li><a href='#ia'>Uso de la IA</a></li>
+<li><a href='#conclusion'>Conclusión</a></li>
 </ul><hr/><hr/>
 
-## Introducción
+## <div id= 'introduccion'>Introducción</div>
 
-Juan Mateo Álvarez Álvarez  - @Juan071825 <br/>
-Adrián González González    - @Adriceka
+Juan Mateo Álvarez Álvarez  - <a href='https://github.com/Juan071825'>@Juan071825</a> <br/>
+Adrián González González    - <a href= 'https://github.com/Adriceka'>@Adriceka</a>
 
 Este proyecto consiste en recrear en el lenguaje de programación python el juego de mesa Mastermind. Además de python también hemos utilizado otras herramientas y lenguajes como git, markdown, ruff.
 
-## Manual
+## <div id='manual'>Manual</div>
 
-## Metodología
+## <div id= 'metodologia'>Metodología</div>
 
 Para llevar a cabo este proyecto decidimos empezar por la lógica del proyecto.
 Para saber que módulos de python con la lógica del programa teníamos que crear, seguimos la guía del algoritmo genético del libro Artificial Intelligence Algorithms de Rishal Hurbans.
 
-La metodología empleada tiene su enfoque inspirado en TDD y consta de tres pasos:
+La metodología empleada tiene su enfoque inspirado en <a href='https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas'>TDD</a> y consta de tres pasos:
 
-1.- Entre los dos integrantes del grupo hacemos una lista de requisitos que debe cumplir un módulo, de funcionalidades que debe de tener. Esto nos sirve para el siguiente paso. <br/>
+<ol>
+<li> Entre los dos integrantes del grupo hacemos una lista de requisitos que debe cumplir un módulo, de funcionalidades que debe de tener. Esto nos sirve para el siguiente paso. </li><br/>
 
-2.- Uno se dedica a desarrollar el módulo utilizando, en un primer momento, las salidas por consola de guía, mientras que el otro creará los casos test. <br/>
+<li> Uno se dedica a desarrollar el módulo utilizando, en un primer momento, las salidas por consola de guía, mientras que el otro creará los casos test.</li> <br/>
 
-3.- La última fase es la de comprobación, en la que se verá si un módulo pasa los casos test creados para él.<br/>
+<li> La última fase es la de comprobación, en la que se verá si un módulo pasa los casos test creados para él.</li><br/>
+</ol>
 
-Para la documentación simplemente seguimos los ejemplos dados en clase como guía de conteniudos que debía tener nuestro README.
+Para la documentación simplemente seguimos los ejemplos dados en clase como guía de conteniudos que debía tener nuestro <a href='https://es.wikipedia.org/wiki/README'>README</a>.
 
-## Descripción técnica
+## <div id= 'descripcion'>Descripción técnica</div>
 
 ### Not list
 
@@ -105,20 +107,20 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
 ### Arquitectura de la aplicación
 
 
-## Diseño
+## <div id= 'diseño'>Diseño</div>
 
 ### Diagrama de componentes
 
-## Implementación
+## <div id= 'implementacion'>Implementación</div>
 
 ### Tecnologías y herramientas utilizadas
 
 <ul>
-<li>pytest, es un framework de python para testear código</li>
-<li>pytest-sugar, es implementa dentro de pytest para hacerlo más visual y amigable</li>
-<li>Coverage, es una herramienta que vine cuanto porcentaje de tu código se ejecuta al realizarse los casos test</li>
-<li>Markdown</li>
-<li>git</li>
+<li><a href='https://pypi.org/project/pytest/'>pytest</a>, es un framework de python para testear código.</li>
+<li><a href='https://pypi.org/project/pytest-sugar/'>pytest-sugar</a>, es implementa dentro de pytest para hacerlo más visual y amigable.</li>
+<li><a heref='https://coverage.readthedocs.io/en/7.13.0/'>Coverage</a>, es una herramienta que vine cuanto porcentaje de tu código se ejecuta al realizarse los casos test.</li>
+<li><a href='https://es.wikipedia.org/wiki/Markdown'>Markdown</a>, es un lenguaje de marcado ligero.</li>
+<li><a href='https://es.wikipedia.org/wiki/Git'>git</a>, es un software ideado para el control de versiones.</li>
 </ul>
 
 ### Backend
@@ -127,7 +129,7 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
 
 <hr/><hr/>
 
-## Pruebas
+## <div id= 'pruebas'>Pruebas</div>
 
 ### Coverage
 
@@ -135,13 +137,13 @@ HISTORIAS USUARIO PROYECTTO MASTERMIND
 
 ### Test de integridad
 
-## Análisis del tiempo invertido
+## <div id= 'tiempo'>Análisis del tiempo invertido</div>
 
 ### Reflexión sobre el tiempo invertido
 
-## Uso de la IA
+## <div id= 'ia'>Uso de la IA</div>
 
-## Conclusión
+## <div id= 'conclusion'>Conclusión</div>
 
 ### Cosas a mejorar
 
