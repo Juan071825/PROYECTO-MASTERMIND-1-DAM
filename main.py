@@ -1,36 +1,56 @@
 import sys
+from src.medir_fitness import medir_fitness
+from src.crear_offspring import crear_offspring
+from src.crear_generacion import crear_generacion
+from src.selector_padres import selector_padres
+from src.generar_poblacion_aleatoria import generar_poblacion_aleatoria
 import src.introducir_codigo as modulos
-import src.generar_poblacion_aleatoria as modulos
-import src.medir_fitness as modulos
-import src.selector_padres as modulos
-import src.crear_offspring as modulos
-import src.crear_generacion as modulos
 
 cromosoma_secreto = modulos.pedir_codigo_secreto()
 
-def mejor_poblacion_inicial():
 
-    contador_generaciones = 0
+def mejor_candidato_generacion(poblacion):
+    fitness_poblacion = medir_fitness(poblacion, cromosoma_secreto)
+    fitness_ordenado = sorted(fitness_poblacion.items(), key=lambda x: x[1], reverse=True)
+    mejor_candidato = fitness_ordenado[0]
+    return mejor_candidato
 
-   
-    poblacion_inicial = modulos.generar_poblacion_aleatoria(100)
-    diccionario_fitness_inicial = modulos.medir_fitness(poblacion_inicial)
 
-    diccionario_valores_fitness_inicial = diccionario_fitness_inicial.values()
-    diccionario_fitness_inicial_ordenado = diccionario_valores_fitness_inicial.sort(reverse=True, key=lambda x: x[1])
+def registro_generaciones():
+    contador_generaciones = 1
 
-    return diccionario_fitness_inicial_ordenado[0]
-         
-            
+    poblacion = generar_poblacion_aleatoria(100)
+    lista_mejores_candidatos = []
 
-def mejor_resto_generaciones(diccionario_fitness_inicial):
-    while contador_generaciones < 14:    
-        diccionario_padres_seleccionados = modulos.selector_padres(diccionario_fitness_inicial)
-        diccionario_hijos = modulos.crear_offspring(diccionario_padres_seleccionados)
-        diccionario_hijos_fitness = modulos.medir_fitness(diccionario_hijos)
-        crear_generacion = modulos.crear_generacion(diccionario_padres_seleccionados, diccionario_hijos_fitness)
+    while contador_generaciones < 14:
+        
+        if contador_generaciones == 1:
+            mejor_candidato = mejor_candidato_generacion(poblacion)
+            lista_mejores_candidatos.append(mejor_candidato)
+            contador_generaciones += 1
+        else:
+            fitness_poblacion = medir_fitness(poblacion, cromosoma_secreto)
+            padres_seleccionados = selector_padres(fitness_poblacion)
+            hijos = crear_offspring(padres_seleccionados)
+            fitness_hijos = medir_fitness(hijos, cromosoma_secreto)
+            poblacion = crear_generacion(padres_seleccionados, fitness_hijos)
+            mejor_candidato = mejor_candidato_generacion(poblacion)
+            lista_mejores_candidatos.append(mejor_candidato)
+            contador_generaciones += 1
 
-        contador_generaciones += 1
+    return print(lista_mejores_candidatos)
+
+
+if __name__ == "__main__":
+    registro_generaciones()
+
+
+
+
+
+
+
+
 
 
 
