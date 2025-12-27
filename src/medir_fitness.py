@@ -12,11 +12,17 @@ def medir_fitness(poblacion, cromosoma_secreto):
     individuos = list(poblacion.values())
     valores_fitness = []
     lista_pines = []
+    individuos_lista = []
     
     
     for individuo in individuos:
+        if isinstance(individuo, tuple):
+            individuo = individuo[0]
+
+        individuos_lista.append(individuo)
+
         cromosoma_secreto_copia = cromosoma_secreto.copy()
-        individuo_copia = individuo.copy()
+        individuo_copia = individuo.copy() 
         fitness = 0
         pines_individuo = []
 
@@ -44,7 +50,7 @@ def medir_fitness(poblacion, cromosoma_secreto):
         valores_fitness.append(fitness)
         lista_pines.append(pines_individuo)
     
-    valores_diccionario_fitness = list(zip(individuos, valores_fitness, lista_pines))
+    valores_diccionario_fitness = list(zip(individuos_lista, valores_fitness, lista_pines))
     return dict(zip(poblacion.keys(), valores_diccionario_fitness))
 
 

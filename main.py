@@ -17,14 +17,14 @@ def mejor_candidato_generacion(poblacion):
 
 
 def registro_generaciones():
-    contador_generaciones = 1
+    contador_generaciones = 0
 
     poblacion = generar_poblacion_aleatoria(100)
     lista_mejores_candidatos = []
 
     while contador_generaciones < 14:
         
-        if contador_generaciones == 1:
+        if contador_generaciones == 0:
             mejor_candidato = mejor_candidato_generacion(poblacion)
             lista_mejores_candidatos.append(mejor_candidato)
             contador_generaciones += 1
