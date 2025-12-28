@@ -1,6 +1,5 @@
 import random
-from src.parametros_mastermind import ALELOS_ELEGIBLES, EMOJIS_ALELOS, PROBABILIDAD_MUTACION
-from src.selector_padres import selector_padres
+from src.parametros_mastermind import ALELOS_ELEGIBLES, EMOJIS_ALELOS, PROBABILIDAD_MUTACION, NUMERO_HIJOS
 
 def crear_offspring(progenitores):
 
@@ -8,33 +7,32 @@ def crear_offspring(progenitores):
 
     lista_hijos = []
     diccionario_hijos = {}
+    progenitores_lista = list(valores[0] for valores in progenitores.values())
 
-    while len(lista_hijos) < 25:
+    while len(lista_hijos) < NUMERO_HIJOS:
 
-        pareja_seleccionada = random.choices(
-            population= list(progenitores.keys()),
-            k= 2
-        )
+        
+        padre, madre = random.sample(progenitores_lista, 2)
+        hijo = []
 
-        padre = progenitores[pareja_seleccionada[0]][0]
-        madre = progenitores[pareja_seleccionada[1]][0]
+        if random.random() < 0.7:
+            punto_corte = random.randint(1,3)
+            hijo = padre[:punto_corte] + madre[punto_corte:]
+        else:
+            hijo = [random.choice([padre[alelo], madre[alelo]]) for alelo in range(4)]
 
-        punto_cruce = random.randint(1, 3)
-
-        hijo = padre[:punto_cruce] + madre[punto_cruce:]
-        hijo = generar_mutacion(hijo, PROBABILIDAD_MUTACION)
-        lista_hijos.append(hijo)
+        hijo_mutado = generar_mutacion(hijo, PROBABILIDAD_MUTACION)
+        lista_hijos.append(hijo_mutado)
 
 
-        for hijo in lista_hijos:
-            diccionario_hijos['hijo' + str(lista_hijos.index(hijo) + UNO)] = hijo
+    for index, hijo in enumerate(lista_hijos, start=0):
+        diccionario_hijos['hijo' + str(index)] = hijo
 
     return diccionario_hijos
 
 def generar_mutacion(hijo, probabilidad_mutacion):
 
-    if random.random() < probabilidad_mutacion:
-        index_alelo_mutado = random.randint(0, 3)
-        nuevo_alelo = random.choice(ALELOS_ELEGIBLES)
-        hijo[index_alelo_mutado] = EMOJIS_ALELOS[nuevo_alelo]
+    for alelo in range(len(hijo)):
+        if random.random() < probabilidad_mutacion:
+            hijo[alelo] = random.choice(list(EMOJIS_ALELOS.values()))
     return hijo
