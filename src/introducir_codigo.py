@@ -16,19 +16,23 @@ def pedir_codigo_secreto():
         
         if entrada_alelo in ALELOS_ELEGIBLES:
             cromosoma_secreto.append(entrada_alelo)
+
+        elif entrada_alelo == 'e':
+            return print("Has salido del juego.")
     
         else:
             print("Algún color no es válido, inténtalo de nuevo.")
-
-        if entrada_alelo == 'e':
-            return print("Has salido del juego.")
 
     emojis_cromosoma_secreto = []
     for alelo in cromosoma_secreto:
         emojis_cromosoma_secreto.append(EMOJIS_ALELOS[alelo])
     
     return list(emojis_cromosoma_secreto)
-            
+
+
+if __name__ == '__main__':
+
+    pedir_codigo_secreto()
 
 
 
