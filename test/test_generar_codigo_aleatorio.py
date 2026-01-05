@@ -1,4 +1,6 @@
-from src.generar_codigo_aleatorio import generar_codigo_aleatorio, EMOJIS_ALELOS
+from src.generar_codigo_aleatorio import generar_codigo_aleatorio
+from src.parametros_mastermind import EMOJIS_ALELOS
+
 
 def test_generar_codigo_aleatorio():
     resultado = generar_codigo_aleatorio()
