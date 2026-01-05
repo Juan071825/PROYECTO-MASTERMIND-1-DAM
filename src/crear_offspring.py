@@ -1,6 +1,6 @@
 import random
 from src.parametros_mastermind import ALELOS_ELEGIBLES, EMOJIS_ALELOS, PROBABILIDAD_MUTACION
-from src.selector_padres import selector_padres
+
 
 def crear_offspring(progenitores):
 
@@ -12,8 +12,8 @@ def crear_offspring(progenitores):
     while len(lista_hijos) < 25:
 
         pareja_seleccionada = random.choices(
-            population= list(progenitores.keys()),
-            k= 2
+            population=list(progenitores.keys()),
+            k=2
         )
 
         padre = progenitores[pareja_seleccionada[0]][0]
@@ -25,11 +25,10 @@ def crear_offspring(progenitores):
         hijo = generar_mutacion(hijo, PROBABILIDAD_MUTACION)
         lista_hijos.append(hijo)
 
-
-        for hijo in lista_hijos:
-            diccionario_hijos['hijo' + str(lista_hijos.index(hijo) + UNO)] = hijo
+        diccionario_hijos[f"hijo{len(lista_hijos)}"] = hijo   # ← FIX IMPORTANTE
 
     return diccionario_hijos
+
 
 def generar_mutacion(hijo, probabilidad_mutacion):
 
