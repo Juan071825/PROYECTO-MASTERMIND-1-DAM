@@ -25,7 +25,7 @@ def crear_offspring(progenitores):
         hijo = generar_mutacion(hijo, PROBABILIDAD_MUTACION)
         lista_hijos.append(hijo)
 
-        diccionario_hijos[f"hijo{len(lista_hijos)}"] = hijo   # ← FIX IMPORTANTE
+        diccionario_hijos[f"hijo{len(lista_hijos)}"] = hijo   
 
     return diccionario_hijos
 
