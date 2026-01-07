@@ -21,10 +21,10 @@ def mejor_candidato_generacion(poblacion, cromosoma_secreto):
     return mejor_candidato
 
 
-def mostrar_intento(numero, cromosoma, pines):
+def mostrar_intento(numero_intento, cromosoma, pines):
     cromosoma_string = ' '.join(cromosoma)
     pines_string = ' '.join(pines)
-    print('Intento ' + str(numero) + ': ' + cromosoma_string + ' | ' + pines_string)
+    print('Intento ' + str(numero_intento) + ': ' + cromosoma_string + ' | ' + pines_string)
 
 
 def registro_generaciones(cromosoma_secreto):
@@ -57,7 +57,7 @@ def registro_generaciones(cromosoma_secreto):
         for color in fitness_colores:
             fitness_colores[color].append(fitness_gen[color])
 
-        # Si lo resuelve, paramos 
+        # SI LO RESUELVE, PARAMOS 
         if mejor_candidato[1][1] == 16:
             print('Código resuelto en ' + str(intento_indice) + '.')
             break

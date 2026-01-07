@@ -12,7 +12,7 @@ def crear_generacion(progenitores, hijos, tamaño_poblacion):
     mejor_progenitor = max(
         progenitores.items(), 
         key=lambda x: x[1][1]
-        )[0] #[1]lista, [1] valores diccionario, [1] (cromosoma, fitness, pines), [0] clave cromosoma
+        )[0] # x[1] (cromosoma, fitness, pines), x[1][1] fitness, [0] clave mejor cromosoma
     nueva_generacion['individuo0'] = progenitores[mejor_progenitor][0]
     contador_entradas += 1
 
@@ -30,7 +30,7 @@ def crear_generacion(progenitores, hijos, tamaño_poblacion):
 
     while len(nueva_generacion) < tamaño_poblacion:
 
-        candidatos = [list(t) for t in set(tuple(c) for c in nueva_generacion.values())]
+        candidatos = [list(cromosoma_tupla) for cromosoma_tupla in set(tuple(cromosoma_lista) for cromosoma_lista in nueva_generacion.values())]
         if not candidatos:
             break
 

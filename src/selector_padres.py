@@ -3,8 +3,8 @@ from src.parametros_mastermind import PORCETAJE_DEFUNCION
 
 
 def selector_padres(poblacion):
-    UNO = 1
-    numero_padres = int(len(poblacion) * (UNO -PORCETAJE_DEFUNCION))
+    
+    numero_padres = int(len(poblacion) * (1 -PORCETAJE_DEFUNCION))
 
     poblacion_restante = poblacion.copy()
     padres_seleccionados = {}
@@ -15,7 +15,7 @@ def selector_padres(poblacion):
 
         pesos = []
         for fitness in lista_fitness:
-            pesos.append(fitness + UNO)
+            pesos.append(fitness + 1)
 
         seleccionado = random.choices(keys, weights=pesos, k=1)[0]
 

@@ -1,9 +1,8 @@
 import random
-from src.parametros_mastermind import ALELOS_ELEGIBLES, EMOJIS_ALELOS, PROBABILIDAD_MUTACION, NUMERO_HIJOS
+from src.parametros_mastermind import EMOJIS_ALELOS, PROBABILIDAD_MUTACION, NUMERO_HIJOS
 
 def crear_offspring(progenitores):
 
-    UNO = 1
 
     lista_hijos = []
     diccionario_hijos = {}
