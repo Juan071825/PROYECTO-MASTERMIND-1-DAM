@@ -1,32 +1,41 @@
 from src.crear_generacion import crear_generacion
 
+def test_tamano():
+    progenitores = {
+        "p1": ([1, 1, 1, 1], 10, (4, 0)),
+        "p2": ([2, 2, 2, 2], 5, (2, 1)),
+    }
+    hijos = {
+        "h1": [3, 3, 3, 3],
+    }
 
-# Test 1: Comprobar que se combinan correctamente progenitores + hijos
-def test_crear_generacion_combinacion_correcta():
-    progenitores = {"p1": [1, 2, 3, 4], "p2": [5, 6, 7, 8]}  
-    hijos = {"h1": [9, 9, 9, 9]}                              
+    nueva = crear_generacion(progenitores, hijos, tamaño_poblacion=4)
 
-    nueva = crear_generacion(progenitores, hijos)             
-
-    assert len(nueva) == 3                                    # Debe haber 3 individuos en total
-
-
-# Test 2: Comprobar que las claves nuevas son correctas
-def test_crear_generacion_claves_correctas():
-    progenitores = {"p1": [1, 2, 3, 4]}                       
-    hijos = {"h1": [5, 6, 7, 8]}                              
-
-    nueva = crear_generacion(progenitores, hijos)
-
-    assert list(nueva.keys()) == ["individuo0", "individuo1"] # Las claves deben ser consecutivas
+    assert len(nueva) == 4
 
 
-# Test 3: Comprobar que el orden de los valores se mantiene
-def test_crear_generacion_orden_valores():
-    progenitores = {"p1": [1, 1, 1, 1]}                       
-    hijos = {"h1": [2, 2, 2, 2]}                              
+def test_mejor_primero():
+    progenitores = {
+        "p1": ([1, 1, 1, 1], 3, (1, 1)),
+        "p2": ([9, 9, 9, 9], 10, (4, 0)),  
+    }
+    hijos = {}
 
-    nueva = crear_generacion(progenitores, hijos)
+    nueva = crear_generacion(progenitores, hijos, tamaño_poblacion=2)
 
-    assert nueva["individuo0"] == [1, 1, 1, 1]                # El primer valor debe ser el progenitor
-    assert nueva["individuo1"] == [2, 2, 2, 2]                # El segundo debe ser el hijo
+    assert nueva["individuo0"] == [9, 9, 9, 9]
+
+
+def test_hijos_incluidos():
+    progenitores = {
+        "p1": ([1, 1, 1, 1], 10, (4, 0)),
+    }
+    hijos = {
+        "h1": [5, 5, 5, 5],
+        "h2": [6, 6, 6, 6],
+    }
+
+    nueva = crear_generacion(progenitores, hijos, tamaño_poblacion=3)
+
+    assert [5, 5, 5, 5] in nueva.values()
+    assert [6, 6, 6, 6] in nueva.values()
