@@ -192,13 +192,18 @@ Para la documentación simplemente seguimos los ejemplos dados en clase como gu�
 
 
 ### Arquitectura de la aplicación
+El proyecto sigue una estructura modular inspirada en capas, donde:
+- **Vista**: Interacción con el usuario y visualización de resultados.
+- **Controlador**: Configuración y parámetros globales.
+- **Modelo**: Generación de códigos y evaluación de fitness.
+- **Servicio**: Lógica principal del algoritmo genético (selección, reproducción, evolución).
 
 
 ## <div id= 'diseño'>Diseño</div>
 
 ### Diagrama de componentes
+![](capturas/arquitectura.jpg)
 
-## <div id= 'implementacion'>Implementación</div>
 
 ### Tecnologías y herramientas utilizadas
 
