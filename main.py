@@ -50,17 +50,17 @@ def registro_generaciones(cromosoma_secreto):
 
         mostrar_intento(intento_indice, cromosoma, pines)
 
-        # Si lo resuelve, paramos
-        if mejor_candidato[1][1] == 16:
-            print('Código resuelto en ' + str(intento_indice) + '.')
-            break
-
-        # REGISTRO PARA LA GRÁFICA
-        generaciones.append(contador_generaciones)
+        # 🔥 REGISTRO PARA LA GRÁFICA (ANTES DEL IF)
+        generaciones.append(intento_indice)
 
         fitness_gen = fitness_por_color(poblacion, cromosoma_secreto)
         for color in fitness_colores:
             fitness_colores[color].append(fitness_gen[color])
+
+        # Si lo resuelve, paramos (después del registro)
+        if mejor_candidato[1][1] == 16:
+            print('Código resuelto en ' + str(intento_indice) + '.')
+            break
 
         # EVOLUCIÓN GENÉTICA
         fitness_poblacion = medir_fitness(poblacion, cromosoma_secreto)
