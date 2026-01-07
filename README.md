@@ -192,13 +192,18 @@ Para la documentación simplemente seguimos los ejemplos dados en clase como gu�
 
 
 ### Arquitectura de la aplicación
+El proyecto sigue una estructura modular inspirada en capas, donde:
+- **Vista**: Interacción con el usuario y visualización de resultados.
+- **Controlador**: Configuración y parámetros globales.
+- **Modelo**: Generación de códigos y evaluación de fitness.
+- **Servicio**: Lógica principal del algoritmo genético (selección, reproducción, evolución).
 
 
 ## <div id= 'diseño'>Diseño</div>
 
 ### Diagrama de componentes
+![](capturas/arquitectura.jpg)
 
-## <div id= 'implementacion'>Implementación</div>
 
 ### Tecnologías y herramientas utilizadas
 
@@ -229,6 +234,13 @@ La duración del proyecto ha sido de cuatro semanas aproximadamente. Los primero
 ### Reflexión sobre el tiempo invertido
 
 El proyecto ha permitido aplicar un algoritmo genético completo para resolver Mastermind, trabajando con código modular, cálculo de fitness, cruce, mutación y generación de poblaciones. También hemos reforzado el uso de tests, la organización del proyecto y la visualización de resultados con una gráfica final. Aunque el programa cumple su objetivo, quedan posibles mejoras como añadir logs, ampliar la visualización y ajustar mejor los parámetros del algoritmo.
+
+- Captura de Juan
+![](capturas/tiempo-juan.png)
+
+- Captura de Adrian
+![](capturas/tiempo-adrian.png)
+
 
 ## <div id= 'ia'>Uso de la IA</div>
 Se han utilizado ChatGPT y Copilot para:
