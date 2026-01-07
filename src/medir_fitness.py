@@ -1,5 +1,5 @@
 from src.introducir_codigo import pedir_codigo_secreto
-from src.parametros_mastermind import EMOJIS_ALELOS
+from src.parametros_mastermind import EMOJIS_ALELOS, EMOJIS_PINES
 
  
 
@@ -16,11 +16,8 @@ def medir_fitness(poblacion, cromosoma_secreto):
     
     
     for individuo in individuos:
-        if isinstance(individuo, tuple):
-            individuo = individuo[0]
 
         individuos_lista.append(individuo)
-
         cromosoma_secreto_copia = cromosoma_secreto.copy()
         individuo_copia = individuo.copy() 
         fitness = 0
@@ -29,10 +26,10 @@ def medir_fitness(poblacion, cromosoma_secreto):
         for alelo in range(len(individuo)):
            #Coincidencia exacta (color y posición).
             if individuo_copia[alelo] == cromosoma_secreto_copia[alelo]:
-                fitness += 2
+                fitness += 4
                 cromosoma_secreto_copia[alelo] = None
                 individuo_copia[alelo] = None
-                pines_individuo.append(EMOJIS_ALELOS['rojo'])
+                pines_individuo.append(EMOJIS_PINES['rojo'])
 
 
         for alelo in range(len(individuo)):
@@ -41,7 +38,7 @@ def medir_fitness(poblacion, cromosoma_secreto):
                 fitness += 1
                 cromosoma_secreto_copia[cromosoma_secreto_copia.index(individuo_copia[alelo])] = None
                 individuo_copia[alelo] = None
-                pines_individuo.append(EMOJIS_ALELOS['blanco'])
+                pines_individuo.append(EMOJIS_PINES['blanco'])
 
             else:
                 fitness += 0
