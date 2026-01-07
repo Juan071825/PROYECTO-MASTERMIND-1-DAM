@@ -230,6 +230,13 @@ La duración del proyecto ha sido de cuatro semanas aproximadamente. Los primero
 
 El proyecto ha permitido aplicar un algoritmo genético completo para resolver Mastermind, trabajando con código modular, cálculo de fitness, cruce, mutación y generación de poblaciones. También hemos reforzado el uso de tests, la organización del proyecto y la visualización de resultados con una gráfica final. Aunque el programa cumple su objetivo, quedan posibles mejoras como añadir logs, ampliar la visualización y ajustar mejor los parámetros del algoritmo.
 
+- Captura de Juan
+![](capturas/tiempo-juan.png)
+
+- Captura de Adrian
+![](capturas/tiempo-adrian.png)
+
+
 ## <div id= 'ia'>Uso de la IA</div>
 Se han utilizado ChatGPT y Copilot para:
 
