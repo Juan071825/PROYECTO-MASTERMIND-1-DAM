@@ -20,6 +20,27 @@ Adrián González González    - <a href= 'https://github.com/Adriceka'>@Adricek
 Este proyecto consiste en recrear en el lenguaje de programación python el juego de mesa Mastermind. Además de python también hemos utilizado otras herramientas y lenguajes como git, markdown, ruff.
 
 ## <div id='manual'>Manual</div>
+#### Instalación
+
+Para ejecutar este proyecto, asegúrate primero de tener **Python** instalado en tu sistema.  
+A continuación, descarga el proyecto desde GitHub y accede a la carpeta del repositorio:
+
+git clone https://github.com/Juan071825/PROYECTO-MASTERMIND-1-DAM.git
+
+Acedemos a la carpeta vincuada con cd
+
+#### Entorno virtual
+Este proyecto utiliza uv, una herramienta que automatiza la creación del entorno virtual y la instalación de dependencias.
+Para su instalación ponemos en la terminal "pip install uv".
+
+Luego ponemos en la terminal "uv sync" para crear un entorno virtual aislado e instalar todas las librerias del proyecto.
+
+#### Uso
+
+Una vez hecho esto ejecutamos desde vscode o desde la terminal el archivo "main.py" donde empezaras el juego de Mastermind
+
+
+
 
 ## <div id= 'metodologia'>Metodología</div>
 
@@ -42,6 +63,15 @@ Para la documentación simplemente seguimos los ejemplos dados en clase como gu�
 
 ### Not list
 
+| **In Scope** (Incluido en el proyecto) | **Out of Scope** (Excluido del proyecto) | **Unresolved** |
+|----------------------------------------|-------------------------------------------|----------------------------------------------|
+| Algoritmo genético para resolver Mastermind | Interfaz gráfica (solo salida por consola) | Añadir logs para depuración |
+| Generación del código secreto | Guardar partidas o resultados | Modo jugador vs jugador |
+| Cálculo de fitness con pines rojo/blanco | Exportación de datos a archivos | Mejorar visualización con emojis |
+| Selección de padres, cruce y mutación |  |  |
+| Creación de nuevas generaciones y elitismo |  |  |
+| Visualización por consola de cada intento |  | |
+|
 
 
 ## Historia de usuario
@@ -197,6 +227,8 @@ Para la documentación simplemente seguimos los ejemplos dados en clase como gu�
 La duración del proyecto ha sido de cuatro semanas aproximadamente. Los primeros días se utilizaron para comprender cómo llevar el algoritmo genético a desarrollo TDD, luego se repartieron los módulos entre ambos, y finalmente se trabajó en la implementación de todo el apartado gráfico.
 
 ### Reflexión sobre el tiempo invertido
+
+El proyecto ha permitido aplicar un algoritmo genético completo para resolver Mastermind, trabajando con código modular, cálculo de fitness, cruce, mutación y generación de poblaciones. También hemos reforzado el uso de tests, la organización del proyecto y la visualización de resultados con una gráfica final. Aunque el programa cumple su objetivo, quedan posibles mejoras como añadir logs, ampliar la visualización y ajustar mejor los parámetros del algoritmo.
 
 ## <div id= 'ia'>Uso de la IA</div>
 Se han utilizado ChatGPT y Copilot para:
