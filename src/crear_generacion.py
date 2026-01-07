@@ -30,7 +30,7 @@ def crear_generacion(progenitores, hijos, tamaño_poblacion):
 
     while len(nueva_generacion) < tamaño_poblacion:
 
-        candidatos = list(set(list(nueva_generacion.values())))
+        candidatos = [list(t) for t in set(tuple(c) for c in nueva_generacion.values())]
         if not candidatos:
             break
 
