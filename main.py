@@ -7,18 +7,12 @@ from src.introducir_codigo import pedir_codigo_secreto
 from src.parametros_mastermind import TAMAÑO_POBLACION
 from src.fitness_por_color import fitness_por_color
 from src.grafico import graficar_barras_fitness_por_generacion_y_color
+from src.mejor_candidato_generacion import mejor_candidato_generacion
 
 
 def introducir_cromosoma_secreto():
     cromosoma_secreto = pedir_codigo_secreto()
     return cromosoma_secreto
-
-
-def mejor_candidato_generacion(poblacion, cromosoma_secreto):
-    fitness_poblacion = medir_fitness(poblacion, cromosoma_secreto)
-    fitness_ordenado = sorted(fitness_poblacion.items(), key=lambda x: x[1][1], reverse=True)
-    mejor_candidato = fitness_ordenado[0]
-    return mejor_candidato
 
 
 def mostrar_intento(numero_intento, cromosoma, pines):
