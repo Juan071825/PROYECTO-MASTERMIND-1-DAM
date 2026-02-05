@@ -8,17 +8,12 @@ from src.parametros_mastermind import TAMAÑO_POBLACION
 from src.fitness_por_color import fitness_por_color
 from src.grafico import graficar_barras_fitness_por_generacion_y_color
 from src.mejor_candidato_generacion import mejor_candidato_generacion
+from src.mostrar_intento import mostrar_intento
 
 
 def introducir_cromosoma_secreto():
     cromosoma_secreto = pedir_codigo_secreto()
     return cromosoma_secreto
-
-
-def mostrar_intento(numero_intento, cromosoma, pines):
-    cromosoma_string = ' '.join(cromosoma)
-    pines_string = ' '.join(pines)
-    print('Intento ' + str(numero_intento) + ': ' + cromosoma_string + ' | ' + pines_string)
 
 
 def registro_generaciones(cromosoma_secreto):
